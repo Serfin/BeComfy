@@ -1,7 +1,9 @@
 @echo off
 
-set path[0]="BeComfy.Api/src/BeComfy.Api"
-set path[1]="BeComfy.Common/src/BeComfy.Common"
+REM Build Common lib first
+set path[0]="BeComfy.Common/src/BeComfy.Common"
+
+set path[1]="BeComfy.Api/src/BeComfy.Api"
 set path[2]="BeComfy.Services.Flights/src/BeComfy.Services.Flights"
 
 set "x=0"

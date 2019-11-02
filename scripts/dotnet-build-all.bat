@@ -8,7 +8,8 @@ set path[1]="BeComfy.Api/src/BeComfy.Api"
 
 REM Build Microservices
 set path[2]="BeComfy.Services.Flights/src/BeComfy.Services.Flights"
-set path[3]="BeComfy.Services.Identity/src/BeComfy.Services.Identity"
+set path[3]="BeComfy.Services.Airplanes/src/BeComfy.Services.Airplanes"
+set path[4]="BeComfy.Services.Identity/src/BeComfy.Services.Identity"
 
 set "x=0"
 cd ../..

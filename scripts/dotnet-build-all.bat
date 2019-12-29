@@ -10,6 +10,7 @@ REM Build Microservices
 set path[2]="BeComfy.Services.Flights/src/BeComfy.Services.Flights"
 set path[3]="BeComfy.Services.Airplanes/src/BeComfy.Services.Airplanes"
 set path[4]="BeComfy.Services.Identity/src/BeComfy.Services.Identity"
+set path[5]="BeComfy.Services.Tickets/src/BeComfy.Services.Tickets"
 
 set "x=0"
 cd ../..

@@ -1,0 +1,24 @@
+version: '2.2'
+
+services:
+  api:
+    image: serfin/becomfy-api:latest
+    container_name: becomfy-api
+    restart: always
+    networks:
+        - becomfy
+    ports: 
+        - 5000:5000
+
+  services-airplanes:
+    image: serfin/becomfy-services-airplanes:latest
+    container_name: becomfy-services-airplanes
+    restart: always
+    networks:
+        - becomfy
+    ports: 
+        - 5015:5015
+
+networks:
+  becomfy:
+    name: becomfy-network

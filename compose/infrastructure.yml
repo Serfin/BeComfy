@@ -1,8 +1,10 @@
-version: "0.1"
+version: '2.2'
 
 services:
   rabbitmq:
     image: rabbitmq:3-management
+    networks:
+      - becomfy
     container_name: rabbitmq
     ports:
       - 5672:5672
@@ -11,6 +13,8 @@ services:
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
     container_name: sqlserver
+    networks:
+      - becomfy
     ports:
       - 1433:1433
     environment:
@@ -21,6 +25,8 @@ services:
     image: jaegertracing/all-in-one
     container_name: jaeger
     restart: always
+    networks: 
+      - becomfy
     ports:
       - 5775:5775/udp
       - 5778:5778
@@ -29,6 +35,10 @@ services:
       - 9411:9411
       - 14268:14268
       - 16686:16686
+
+networks:
+  becomfy:
+    name: becomfy-network
 
 volumes:
   rabbitmq:

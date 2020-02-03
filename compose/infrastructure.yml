@@ -9,6 +9,8 @@ services:
     ports:
       - 5672:5672
       - 15672:15672
+    volumes: 
+      - rabbitmq:/var/lib/rabbitmq
 
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
@@ -20,6 +22,8 @@ services:
     environment:
       - ACCEPT_EULA=Y
       - SA_PASSWORD=StrongP@SSW0RD
+    volumes:
+      - sqlserver:/data/db
 
   jaeger:
     image: jaegertracing/all-in-one

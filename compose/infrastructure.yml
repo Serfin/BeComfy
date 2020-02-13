@@ -21,18 +21,16 @@ services:
     volumes: 
       - rabbitmq:/var/lib/rabbitmq
 
-  sqlserver:
-    image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
-    container_name: sqlserver
+  mongo:
+    image: mongo
+    container_name: mongo
+    restart: always
     networks:
       - becomfy
-    ports:
-      - 1433:1433
-    environment:
-      - ACCEPT_EULA=Y
-      - SA_PASSWORD=StrongP@SSW0RD
-    volumes:
-      - sqlserver:/data/db
+    ports: 
+      - 27017:27017
+      volumes:
+        - mongo:/data/db
 
   jaeger:
     image: jaegertracing/all-in-one
@@ -56,5 +54,5 @@ networks:
 volumes:
   rabbitmq:
     driver: local
-  sqlserver:
+  mongo:
     driver: local

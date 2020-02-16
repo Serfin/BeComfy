@@ -29,8 +29,8 @@ services:
       - becomfy
     ports: 
       - 27017:27017
-      volumes:
-        - mongo:/data/db
+    volumes:
+      - mongo:/data/db
 
   jaeger:
     image: jaegertracing/all-in-one

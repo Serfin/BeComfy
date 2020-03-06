@@ -7,7 +7,7 @@ set list=%list%;"BeComfy.Services.Identity/src/BeComfy.Services.Identity"
 set list=%list%;"BeComfy.Services.Tickets/src/BeComfy.Services.Tickets"
 set list=%list%;"BeComfy.Services.Customers/src/BeComfy.Services.Customers.Api"
 set list=%list%;"BeComfy.Services.SignalR/src/BeComfy.Services.SignalR"
-set list=%list%;"BeComfy.Services.Employees/src/BeComfy.Services.Employees"
+set list=%list%;"BeComfy.Services.Employees/src/BeComfy.Services.Employees.Api"
 
 call cd ../..
 

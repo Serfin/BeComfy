@@ -2,6 +2,7 @@
 
 REM Build Common lib first
 set list="BeComfy.Common/src/BeComfy.Common"
+set list="BeComfy.Common/src/BeComfy.Logging.Elk"
 
 REM Build API
 set list=%list%;"BeComfy.Api/src/BeComfy.Api"

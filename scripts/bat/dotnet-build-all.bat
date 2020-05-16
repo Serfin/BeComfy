@@ -1,8 +1,8 @@
 @echo off
 
 REM Build Common lib first
-set list="BeComfy.Common/src/BeComfy.Common"
-set list="BeComfy.Common/src/BeComfy.Logging"
+set list="BeComfy.Common.Libraries/src/BeComfy.Common"
+set list="BeComfy.Common.Libraries/src/BeComfy.Logging"
 
 REM Build API
 set list=%list%;"BeComfy.Api/src/BeComfy.Api"

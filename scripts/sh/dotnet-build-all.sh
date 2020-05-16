@@ -2,8 +2,8 @@
 
 # Build Common lib first, then api and services
 paths=(
-    "BeComfy.Common/src/BeComfy.Common"
-    "BeComfy.Common/src/BeComfy.Logging"
+    "BeComfy.Common.Libraries/src/BeComfy.Common"
+    "BeComfy.Common.Libraries/src/BeComfy.Logging"
     "BeComfy.Api/src/BeComfy.Api"
     "BeComfy.Services.Flights/src/BeComfy.Services.Flights"
     "BeComfy.Services.Airplanes/src/BeComfy.Services.Airplanes"

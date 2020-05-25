@@ -126,7 +126,7 @@ GET {{apiUrl}}/airplanes?page=1&pageSize=100&status=Ready
 Content-Type: application/json
 
 ### GET AIRPLANE ###
-GET {{apiGatewayUrl}}/airplanes/{{airplaneId}}
+GET {{apiUrl}}/airplanes/{{airplaneId}}
 Content-Type: application/json
 
 ### GET AIRPLANE ###
@@ -193,7 +193,7 @@ Authorization: Bearer {{jwtToken}}
 }
 
 ### GET TICKETS FOR CUSTOMER ###
-GET {{apiUrl}}/Tickets?customerId=45ee6bdd-e724-4a3e-8c6e-17da84d5afa8&page=1&pagesize=30
+GET {{apiUrl}}/Tickets?customerId={{customerId}}&page=1&pagesize=30
 Content-Type: application/json
 Authorization: Bearer {{jwtToken}}
 

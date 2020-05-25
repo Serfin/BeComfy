@@ -14,7 +14,7 @@ paths=(
     "BeComfy.Services.Employees/src/BeComfy.Services.Employees.Api"
 )
 
-cd ../../..
+cd ../..
 
 clear
 

@@ -9,7 +9,7 @@ set list=%list%;"BeComfy.Services.Customers/src/BeComfy.Services.Customers.Api"
 set list=%list%;"BeComfy.Services.SignalR/src/BeComfy.Services.SignalR"
 set list=%list%;"BeComfy.Services.Employees/src/BeComfy.Services.Employees.Api"
 
-call cd ../..
+cd ../..
 
 for %%a in (%list%) do (
     echo ============================================================

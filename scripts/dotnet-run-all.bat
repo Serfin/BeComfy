@@ -1,6 +1,7 @@
 @echo off
 
 set list="BeComfy.Api/src/BeComfy.Api"
+set list=%list%;"BeComfy.ApiGateway.Ocelot/src/BeComfy.ApiGateway.Ocelot"
 set list=%list%;"BeComfy.Services.Flights/src/BeComfy.Services.Flights"
 set list=%list%;"BeComfy.Services.Airplanes/src/BeComfy.Services.Airplanes"
 set list=%list%;"BeComfy.Services.Identity/src/BeComfy.Services.Identity"

@@ -6,6 +6,7 @@ set list="BeComfy.Common.Libraries/src/BeComfy.Logging"
 
 REM Build API
 set list=%list%;"BeComfy.Api/src/BeComfy.Api"
+set list=%list%;"BeComfy.ApiGateway.Ocelot/src/BeComfy.ApiGateway.Ocelot"
 
 REM Build Microservices
 set list=%list%;"BeComfy.Services.Flights/src/BeComfy.Services.Flights"

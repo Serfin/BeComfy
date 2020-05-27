@@ -3,6 +3,7 @@
 # Build Common lib first, then api and services
 paths=(
     "BeComfy.Api/src/BeComfy.Api"
+    "BeComfy.ApiGateway.Ocelot/src/BeComfy.ApiGateway.Ocelot"
     "BeComfy.Services.Flights/src/BeComfy.Services.Flights"
     "BeComfy.Services.Airplanes/src/BeComfy.Services.Airplanes"
     "BeComfy.Services.Identity/src/BeComfy.Services.Identity"

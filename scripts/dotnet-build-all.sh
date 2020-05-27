@@ -5,6 +5,7 @@ paths=(
     "BeComfy.Common.Libraries/src/BeComfy.Common"
     "BeComfy.Common.Libraries/src/BeComfy.Logging"
     "BeComfy.Api/src/BeComfy.Api"
+    "BeComfy.ApiGateway.Ocelot/src/BeComfy.ApiGateway.Ocelot"
     "BeComfy.Services.Flights/src/BeComfy.Services.Flights"
     "BeComfy.Services.Airplanes/src/BeComfy.Services.Airplanes"
     "BeComfy.Services.Identity/src/BeComfy.Services.Identity"

@@ -21,29 +21,29 @@
 #########################################################
 ####################  VARIABLES  ########################
 #########################################################
-@airplaneId = c69ce6be-a472-40a3-ba82-66cd94b523fb
-@customerId = 45ee6bdd-e724-4a3e-8c6e-17da84d5afa8
-@jwtToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0NWVlNmJkZGU3MjQ0YTNlOGM2ZTE3ZGE4NGQ1YWZhOCIsInVuaXF1ZV9uYW1lIjoiNDVlZTZiZGRlNzI0NGEzZThjNmUxN2RhODRkNWFmYTgiLCJqdGkiOiIyMTM4NDA2OS03MWE0LTQzMzktOGYwYi0xYTk1NTIyZWIzYWUiLCJpYXQiOiIxNTg4MDIwODU4MjIzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQURNSU4iLCJuYmYiOjE1ODgwMjA4NTgsImV4cCI6MTU4ODAyNjI1OCwiaXNzIjoiYmVjb21meS1pZGVudGl0eS1zZXJ2aWNlIn0.kRcY_pGDzV5TTrT7UaSPm1Vx9pCHzm-ONR5tsFisH-Y
+@airplaneId = 108e62d1-0c9e-48a1-a64e-954c680db495
+@customerId = d1e0953d-a835-40fd-90ff-ee08ea4597db
+@jwtToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkMWUwOTUzZGE4MzU0MGZkOTBmZmVlMDhlYTQ1OTdkYiIsInVuaXF1ZV9uYW1lIjoiZDFlMDk1M2RhODM1NDBmZDkwZmZlZTA4ZWE0NTk3ZGIiLCJqdGkiOiI0NzVmMTk2YS1lYjBkLTQ3OGMtYTk0OS1lMGUyZjg0Yzk1MzgiLCJpYXQiOiIxNTk0NDE4OTUxOTgyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQURNSU4iLCJuYmYiOjE1OTQ0MTg5NTEsImV4cCI6MTU5NDQyNDM1MSwiaXNzIjoiYmVjb21meS1pZGVudGl0eS1zZXJ2aWNlIn0.tTk4R3EMKR0eM_DFxsYlE-khhhXcPOtYpqwoDHScDvQ
 
 #########################################################
 ################ SERVICES HEALTHCHECK ###################
 #########################################################
 
-GET {{apiUrl}}/Hom
+GET {{apiUrl}}/Home
 ###
-GET {{flightServiceUrl}}/Hom
+GET {{flightServiceUrl}}/Home
 ###
-GET {{identityServiceUrl}}/Hom
+GET {{identityServiceUrl}}/Home
 ###
-GET {{airplanesServiceUrl}}/Hom
+GET {{airplanesServiceUrl}}/Home
 ###
-GET {{ticketsServiceUrl}}/Hom
+GET {{ticketsServiceUrl}}/Home
 ###
-GET {{customersServiceUrl}}/Hom
+GET {{customersServiceUrl}}/Home
 ###
-GET {{signalRServiceUrl}}/Hom
+GET {{signalRServiceUrl}}/Home
 ###
-GET {{employeesServiceUrl}}/Hom
+GET {{employeesServiceUrl}}/Home
 
 
 #########################################################
@@ -113,11 +113,15 @@ Content-Type: application/json
 
 {
 	"airplaneRegistrationNumber": "PL-015",
-	"model": "Boeing 767",
+	"airplaneModel": "Boeing 767",
 	"availableSeats": {
 			"economic": 100,
 			"business": 100
-		}
+		},
+	"requiredCrew": {
+		"pilot": 2,
+		"staff": 15
+	}
 }
 
 ### BROWSE AIRPLANES ###
@@ -129,15 +133,11 @@ Content-Type: application/json
 GET {{apiUrl}}/airplanes/{{airplaneId}}
 Content-Type: application/json
 
-### GET AIRPLANE ###
-GET {{apiGatewayUrl}}/Home
-Content-Type: application/json
-
 #########################################################
 ################### FLIGHTS SERVICE #####################
 #########################################################
 
-@flightId = cce9be06-4280-4fce-ac1b-0be0efe58372
+@flightId = caf95c69-b760-4f33-88e1-db1e91ded203
 
 ### GET FLIGHT ###
 GET {{apiUrl}}/flights/{{flightId}}
@@ -212,7 +212,7 @@ Authorization: Bearer {{jwtToken}}
 	"surname": "Test",
 	"birthday": "1998.06.06 01:00:00.000",
 	"employeeStatus": "Available",
-	"employeePosition": "Pilot"
+	"employeePosition": "Staff"
 }
 
 #########################################################

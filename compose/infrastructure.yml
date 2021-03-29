@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   consul:
-    image: consul:latest
+    image: consul:1.9.0
     container_name: consul
     restart: always
     networks:
@@ -11,7 +11,7 @@ services:
       - 8500:8500
 
   rabbitmq:
-    image: rabbitmq:3-management
+    image: rabbitmq:3.8.9-management
     networks:
       - becomfy
     container_name: rabbitmq
